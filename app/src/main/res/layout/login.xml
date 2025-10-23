@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/loginHeader"
+        android:id="@+id/registerHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/registerHeader" />
 
     <EditText
         android:id="@+id/editText"
@@ -88,6 +88,7 @@
         android:background="@drawable/button_background"
         android:fontFamily="@font/lexend"
         android:text="Login"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -160,12 +161,12 @@
         android:layout_marginEnd="10dp"
         android:fontFamily="@font/lexend"
         android:text="Dont have an account?"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/signup_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/google_button" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/signup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
