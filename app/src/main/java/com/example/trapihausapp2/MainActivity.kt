@@ -1,6 +1,9 @@
 package com.example.trapihausapp2
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -16,32 +19,15 @@ import com.example.trapihausapp2.ui.theme.TrapiHausApp2Theme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            TrapiHausApp2Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+
+        val runnable = Runnable {
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            finish()
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TrapiHausApp2Theme {
-        Greeting("Android")
+        val handler = Handler(Looper.getMainLooper())
+        handler.postDelayed(runnable, 2000)
     }
 }
