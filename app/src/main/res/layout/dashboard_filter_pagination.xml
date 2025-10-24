@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hotels"
+        android:textAllCaps="false"
+        android:paddingHorizontal="14sp"
+        android:layout_marginHorizontal="20sp"
+        android:background="@drawable/gray_button_background"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apartments"
+        android:textAllCaps="false"
+        android:paddingHorizontal="14sp"
+        android:layout_marginEnd="20sp"
+        android:background="@drawable/gray_button_background"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transients"
+        android:textAllCaps="false"
+        android:paddingHorizontal="14sp"
+        android:background="@drawable/gray_button_background"/>
+
+
+</LinearLayout>
