@@ -1,55 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent">
 
-    <!--
-    1. Header (XML 1)
-    Since the orientation is vertical, we set layout_height to wrap_content
-    so it only takes up the necessary vertical space. No weight needed.
-    -->
-    <include
-        android:id="@+id/main_header"
-        layout="@layout/dashboard_header"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp" /> <!-- Removed horizontal margin -->
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
 
-    <!--
-    2. Location Section (XML 2)
-    This also stacks below the header and takes only the space it needs.
-    -->
-    <include
-        android:id="@+id/location_section"
-        layout="@layout/dashboard_location_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp" /> <!-- Removed horizontal margin -->
+        <!--
+        1. Header (XML 1)
+        Since the orientation is vertical, we set layout_height to wrap_content
+        so it only takes up the necessary vertical space. No weight needed.
+        -->
+        <include
+            android:id="@+id/main_header"
+            layout="@layout/dashboard_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp" /> <!-- Removed horizontal margin -->
 
-    <!--
-    3. Property Grid (XML 4)
-    To make this section dominate the screen space, we use layout_weight.
-    CRITICAL: In a vertical layout, set layout_height="0dp".
-    -->
-    <include
-        android:id="@+id/property_grid_section"
-        layout="@layout/dashboard_layout_property_grid"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10" />
+        <!--
+        2. Location Section (XML 2)
+        This also stacks below the header and takes only the space it needs.
+        -->
+        <include
+            android:id="@+id/location_section"
+            layout="@layout/dashboard_location_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp" /> <!-- Removed horizontal margin -->
 
-    <!--
-    4. Menu Tabs (XML 5) - Added based on your requirements
-    This should usually be wrap_content and placed last in the stack.
-    -->
-    <include
-        android:id="@+id/bottom_menu"
-        layout="@layout/dashboard_bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <!--
+        3. Property Grid (XML 4)
+        To make this section dominate the screen space, we use layout_weight.
+        CRITICAL: In a vertical layout, set layout_height="0dp".
+        -->
+        <include
+            android:id="@+id/property_grid_section"
+            layout="@layout/dashboard_layout_property_grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10" />
 
-</LinearLayout>
+        <!--
+        4. Menu Tabs (XML 5) - Added based on your requirements
+        This should usually be wrap_content and placed last in the stack.
+        -->
+        <include
+            android:id="@+id/bottom_menu"
+            layout="@layout/dashboard_bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

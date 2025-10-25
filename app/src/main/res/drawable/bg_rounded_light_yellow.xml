@@ -1,0 +1,5 @@
+<!-- Example: res/drawable/bg_rounded_light_yellow.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FEFCE8"/>
+    <corners android:radius="8dp"/>
+</shape>

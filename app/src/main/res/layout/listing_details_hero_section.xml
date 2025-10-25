@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    tools:background="@android:color/darker_gray"> <!-- Height set to match the visual ratio -->
+
+    <!-- 1. Background Image/Slider Area -->
+    <!-- Ideally, this would be a ViewPager2 or Carousel for multiple images -->
+    <ImageView
+        android:id="@+id/detail_main_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/property_placeholder"
+         />
+
+    <!-- 2. Top Control Bar (Back, Share, Heart) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="32dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp">
+
+        <!-- Back Button (Top Left) -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_circle"
+            android:src="@drawable/back_arrow"
+            app:tint="@android:color/black" />
+        <!-- Note: You would need a drawable named ic_arrow_back and bg_white_circle -->
+
+        <!-- Spacer to push Share and Heart to the right -->
+        <Space android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- Share Button (Top Right 1) -->
+        <ImageButton
+            android:id="@+id/share_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_white_circle"
+            android:src="@drawable/share_icon"
+            app:tint="@android:color/black" />
+
+        <!-- Heart Button (Top Right 2) -->
+        <ImageButton
+            android:id="@+id/favorite_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_circle"
+            android:src="@drawable/details_fave_icon"
+
+            app:tint="@android:color/black" />
+    </LinearLayout>
+
+    <!-- 3. Verified Badge (Bottom Left Overlay) -->
+    <TextView
+        android:id="@+id/verified_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_rounded_green_badge"
+        android:drawablePadding="6dp"
+        android:paddingStart="12dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="6dp"
+        android:text="Verified"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/check"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- 4. Pager Dots/Indicator (Bottom Center) -->
+    <LinearLayout
+        android:id="@+id/pager_dots_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <!-- Placeholder dots for visual representation -->
+        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_white_circle" android:layout_margin="4dp"/>
+        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_white_circle" android:layout_margin="4dp"/>
+        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_white_circle" android:layout_margin="4dp"/>
+    </LinearLayout>
+
+</FrameLayout>
