@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Title: "About this place" -->
+        <TextView
+            android:id="@+id/tv_about_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/lexend"
+            android:text="About this place"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Body Text -->
+        <TextView
+            android:id="@+id/tv_about_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Experience the charm of Baguio City in this beautifully appointed accommodation. Perfect for families or groups looking for a comfortable and memorable stay. Located in a prime area with easy access to major attractions and local amenities."
+            android:textColor="#4D4D4D"
+            android:textSize="16sp"
+            android:fontFamily="@font/lexend"
+            android:lineSpacingExtra="4sp"
+        />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F8F8F8"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp">
+
+    <!-- 1. Reviews Header -->
+    <TextView
+        android:id="@+id/text_reviews_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reviews"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 2. See All Link -->
+    <TextView
+        android:id="@+id/text_see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See all"
+        android:textSize="16sp"
+        android:textColor="#007AFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_reviews_title"
+        app:layout_constraintBottom_toBottomOf="@id/text_reviews_title"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- 3. Review Card (Using CardView for rounded corners and elevation) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/text_reviews_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- 3a. Reviewer Avatar (Placeholder for a red circle) -->
+            <View
+                android:id="@+id/view_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- 3b. Reviewer Name -->
+            <TextView
+                android:id="@+id/text_reviewer_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="John Dela Cruz"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toEndOf="@id/view_avatar"
+                app:layout_constraintTop_toTopOf="@id/view_avatar"
+                app:layout_constraintEnd_toStartOf="@id/text_rating_star"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="packed" />
+
+            <!-- 3c. Review Date -->
+            <TextView
+                android:id="@+id/text_review_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="2 weeks ago"
+                android:textSize="14sp"
+                android:textColor="#6C757D"
+                app:layout_constraintStart_toEndOf="@id/view_avatar"
+                app:layout_constraintTop_toBottomOf="@id/text_reviewer_name" />
+
+            <!-- 3d. Rating Score (5.0) -->
+            <TextView
+                android:id="@+id/text_rating_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- 3e. Rating Star -->
+            <TextView
+                android:id="@+id/text_rating_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:text="★"
+                android:textSize="18sp"
+                android:textColor="#FFC107"
+                app:layout_constraintEnd_toStartOf="@id/text_rating_score"
+                app:layout_constraintTop_toTopOf="@id/text_rating_score"
+                app:layout_constraintBottom_toBottomOf="@id/text_rating_score" />
+
+            <!-- 3f. Review Body Text -->
+            <TextView
+                android:id="@+id/text_review_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Amazing place! Very clean and comfortable. The host was very accommodating. Would definitely stay here again!"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/view_avatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
