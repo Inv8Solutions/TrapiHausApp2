@@ -27,7 +27,6 @@
             <include layout="@layout/listing_details_amenity_section"/>
             <include layout="@layout/listing_details_about_place"/>
 
-            <!-- You would include the review section here -->
             <include layout="@layout/listing_details_review_section"/>
 
         </LinearLayout>

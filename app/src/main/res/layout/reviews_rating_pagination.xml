@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:background="#F8F8F8"
+    android:paddingVertical="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Button 1: Selected State ("All") -->
+        <!-- Use a custom style to combine a star icon and text -->
+        <TextView
+            android:id="@+id/btn_filter_all"
+            style="@style/ReviewFilterButton.Selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/white_star"
+            android:text="All" />
+
+        <!-- Button 2: Unselected State ("5") -->
+        <TextView
+            android:id="@+id/btn_filter_5"
+            style="@style/ReviewFilterButton.Unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@drawable/blue_star"
+            android:text="5" />
+
+        <!-- Button 3: Unselected State ("4") -->
+        <TextView
+            android:id="@+id/btn_filter_4"
+            style="@style/ReviewFilterButton.Unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@drawable/blue_star"
+            android:text="4" />
+
+        <!-- Button 4: Unselected State ("3") -->
+        <TextView
+            android:id="@+id/btn_filter_3"
+            style="@style/ReviewFilterButton.Unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@drawable/blue_star"
+            android:text="3" />
+
+        <!-- Button 5: Unselected State ("2") -->
+        <TextView
+            android:id="@+id/btn_filter_2"
+            style="@style/ReviewFilterButton.Unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@drawable/blue_star"
+            android:text="2" />
+
+        <!-- Button 6: Unselected State ("1") -->
+        <TextView
+            android:id="@+id/btn_filter_1"
+            style="@style/ReviewFilterButton.Unselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@drawable/blue_star"
+            android:text="1" />
+
+    </LinearLayout>
+</HorizontalScrollView>
