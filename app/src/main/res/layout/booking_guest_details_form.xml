@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Row 1: Split Name Fields -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- First Name -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:fontFamily="@font/lexend"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_field_background"
+                android:hint="Juan"
+                android:paddingHorizontal="16dp"
+                android:textColor="#212121"
+                android:textColorHint="#9E9E9E"
+                android:textSize="14sp"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/lexend"/>
+        </LinearLayout>
+
+        <!-- Last Name -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:fontFamily="@font/lexend"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_field_background"
+                android:hint="Dela Cruz"
+                android:paddingHorizontal="16dp"
+                android:textColor="#212121"
+                android:textColorHint="#9E9E9E"
+                android:textSize="14sp"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/lexend"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Email -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:fontFamily="@font/lexend"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_field_background"
+        android:hint="juandlc@email.com"
+        android:paddingHorizontal="16dp"
+        android:textColor="#212121"
+        android:textColorHint="#9E9E9E"
+        android:textSize="14sp"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/lexend"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Phone Number -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:fontFamily="@font/lexend"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_field_background"
+        android:hint="+63 917 XXX XXXX"
+        android:paddingHorizontal="16dp"
+        android:textColor="#212121"
+        android:textColorHint="#9E9E9E"
+        android:textSize="14sp"
+        android:inputType="phone"
+        android:fontFamily="@font/lexend"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Special Request -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Special Request"
+        android:fontFamily="@font/lexend"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/shape_field_background"
+        android:hint="E.g., Early check-in, extra pillows"
+        android:gravity="top|start"
+        android:padding="16dp"
+        android:textColor="#212121"
+        android:textColorHint="#9E9E9E"
+        android:textSize="14sp"
+        android:inputType="textMultiLine"
+        android:fontFamily="@font/lexend"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

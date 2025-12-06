@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 1. Month Navigation Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <ImageButton
+                android:id="@+id/btnPrevMonth"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="#212121"/>
+
+            <TextView
+                android:id="@+id/tvMonthYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="November 2025"
+                android:fontFamily="@font/lexend"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#212121"/>
+
+            <ImageButton
+                android:id="@+id/btnNextMonth"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_next"
+                app:tint="#212121"/>
+        </LinearLayout>
+
+        <!-- 2. Weekday Headers (Static) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView style="@style/CalendarWeekday" android:text="SUN" />
+            <TextView style="@style/CalendarWeekday" android:text="MON" />
+            <TextView style="@style/CalendarWeekday" android:text="TUE" />
+            <TextView style="@style/CalendarWeekday" android:text="WED" />
+            <TextView style="@style/CalendarWeekday" android:text="THU" />
+            <TextView style="@style/CalendarWeekday" android:text="FRI" />
+            <TextView style="@style/CalendarWeekday" android:text="SAT" />
+        </LinearLayout>
+
+        <!-- 3. The Interactive Calendar Grid -->
+        <!-- This replaces the manual rows. In Kotlin, you attach a GridLayoutManager count=7 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCalendarDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="7"
+            tools:listitem="@layout/item_calendar_day"
+            tools:itemCount="35"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
