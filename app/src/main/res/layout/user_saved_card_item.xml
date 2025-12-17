@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Modular saved property card item layout.
+    Reuses existing drawables: bg_rounded_green_badge, bg_white_circle, shape_tab_selected
+    Design inspired by dashboard_item_product_card.xml with optimizations for grid display.
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Image and Overlays Section -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+
+            <!-- Property Image -->
+            <ImageView
+                android:id="@+id/saved_property_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/property_image_description"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/property_placeholder"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- Verified Badge (Top Left) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_rounded_green_badge"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/check"
+                    android:contentDescription="@string/verified_icon"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verified"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/lexend"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Favorite Button (Top Right) -->
+            <ImageButton
+                android:id="@+id/saved_favorite_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_white_circle"
+                android:src="@drawable/saved_icon"
+                android:scaleType="center"
+                android:padding="8dp"
+                android:contentDescription="@string/favorite_button"
+                app:tint="#E74C3C"/>
+
+        </FrameLayout>
+
+        <!-- Text Content Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp">
+
+            <!-- Property Title -->
+            <TextView
+                android:id="@+id/saved_property_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Loakan Heights Residences"
+                android:textColor="#212121"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/lexend"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <!-- Location with Icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/location_icon"
+                android:contentDescription="@string/location_icon"
+                android:scaleType="fitCenter"
+                app:tint="#757575"/>
+
+                <TextView
+                    android:id="@+id/saved_property_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    tools:text="Near Camp John Hay"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/lexend"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+            </LinearLayout>
+
+            <!-- Price Block -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/saved_property_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="P6,300"
+                    android:textColor="#1976D2"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/lexend"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/price_per_month"
+                    android:textColor="#757575"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/lexend"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+

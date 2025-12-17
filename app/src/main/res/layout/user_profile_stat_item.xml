@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Individual stat card for profile (Bookings, Reviews, Rating)
+    Modular component used 3 times in user_profile_hero.xml
+    Displays a number and label on a semi-transparent background
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/shape_circle_light_blue"
+    android:paddingVertical="16dp"
+    android:paddingHorizontal="12dp">
+
+    <!-- Stat Number -->
+    <TextView
+        android:id="@+id/stat_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_number_placeholder"
+        android:fontFamily="@font/lexend"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Stat Label -->
+    <TextView
+        android:id="@+id/stat_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bookings_label"
+        android:fontFamily="@font/lexend"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:layout_marginTop="6dp"
+        android:gravity="center" />
+
+</LinearLayout>
+

@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">TrapiHausApp2</string>
+
+    <!-- Saved Places Screen -->
+    <string name="saved_places">Saved Places</string>
+    <string name="manage_saved_places">Manage your Saved Places</string>
+    <string name="property_image_description">Property image</string>
+    <string name="verified">Verified</string>
+    <string name="verified_icon">Verified icon</string>
+    <string name="favorite_button">Add to favorites</string>
+    <string name="location_icon">Location icon</string>
+    <string name="price_per_month">/month</string>
+    <string name="saved_accommodations_found">2 accommodations found</string>
+    <string name="no_saved_places">No Saved Places Yet</string>
+    <string name="no_saved_places_description">Start exploring and save your favorite properties to view them later.</string>
+    <string name="explore_properties">Explore Properties</string>
+    <string name="empty_saved_icon">Empty saved icon</string>
+
+    <!-- User Profile Screen -->
+    <string name="profile_avatar">Profile avatar</string>
+    <string name="user_name_placeholder">Juan Dela Cruz</string>
+    <string name="user_email_placeholder">juan.delacruz@gmail.com</string>
+    <string name="bookings_label">Bookings</string>
+    <string name="reviews_label">Reviews</string>
+    <string name="rating_label">Rating</string>
+    <string name="become_a_host">Become a Host</string>
+    <string name="become_a_host_description">Earn extra income by listing your property on TrapiHaus</string>
+    <string name="get_started">Get Started</string>
+    <string name="notifications">Notifications</string>
+    <string name="manage_your_notifications">Manage your notifications</string>
+    <string name="privacy_security">Privacy &amp; Security</string>
+    <string name="password_2fa_settings">Password, 2FA settings</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="manage_cards_wallets">Manage cards and wallets</string>
+    <string name="reviews">Reviews</string>
+    <string name="your_reviews_ratings">Your reviews and ratings</string>
+    <string name="help_center">Help Center</string>
+    <string name="menu_item_icon">Menu item icon</string>
+    <string name="navigate">Navigate</string>
 </resources>

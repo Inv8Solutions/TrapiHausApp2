@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Empty state layout for when no saved properties exist.
+    Displays a friendly message to encourage users to save properties.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="60dp">
+
+    <!-- Empty Icon -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/saved_icon"
+        android:contentDescription="@string/empty_saved_icon"
+        android:scaleType="fitCenter"
+        app:tint="#BDBDBD"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Empty Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_saved_places"
+        android:textColor="#212121"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/lexend"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Empty Description -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_saved_places_description"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        android:fontFamily="@font/lexend"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Call-to-action Button -->
+    <Button
+        android:id="@+id/empty_state_action_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/explore_properties"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:fontFamily="@font/lexend"
+        android:textColor="@android:color/white"
+        android:background="@drawable/shape_button_blue"/>
+
+</LinearLayout>
+

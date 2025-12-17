@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Become a Host promotional card
+    Reuses: shape_button_blue for button
+    Features: Orange background, call-to-action button, descriptive text
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_card_orange"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="20dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Create a shape drawable for rounded corners -->
+    <!-- Using android:background with custom drawable approach -->
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/become_a_host"
+        android:fontFamily="@font/lexend"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/become_a_host_description"
+        android:fontFamily="@font/lexend"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.9" />
+
+    <!-- Get Started Button -->
+    <Button
+        android:id="@+id/become_host_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/get_started"
+        android:textAllCaps="false"
+        android:fontFamily="@font/lexend"
+        android:textColor="#FF9800"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="28dp"
+        android:background="@drawable/shape_button_white_rounded" />
+
+</LinearLayout>
+
