@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 1. Header Module -->
+        <include layout="@layout/user_search_header" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 2. Location Input -->
+            <TextView
+                style="@style/SearchLabelStyle"
+                android:text="Location" />
+
+            <LinearLayout
+                style="@style/SearchInputContainerStyle">
+
+                <ImageView
+                    style="@style/SearchIconStyle"
+                    android:src="@drawable/ic_location_on" />
+
+                <EditText
+                    style="@style/SearchInputBoxStyle"
+                    android:hint="Where are you going?"
+                    android:inputType="textPostalAddress" />
+            </LinearLayout>
+
+            <!-- 3. Check-in Input -->
+            <TextView
+                style="@style/SearchLabelStyle"
+                android:text="Check-in"
+                android:layout_marginTop="24dp"/>
+
+            <LinearLayout
+                style="@style/SearchInputContainerStyle">
+
+                <ImageView
+                    style="@style/SearchIconStyle"
+                    android:src="@drawable/ic_calendar_today" />
+
+                <EditText
+                    style="@style/SearchInputBoxStyle"
+                    android:hint="mm/dd/yyyy"
+                    android:inputType="date"
+                    android:focusable="false" /> <!-- Usually opens a datepicker -->
+            </LinearLayout>
+
+            <!-- 4. Check-out Input -->
+            <TextView
+                style="@style/SearchLabelStyle"
+                android:text="Check-out"
+                android:layout_marginTop="24dp"/>
+
+            <LinearLayout
+                style="@style/SearchInputContainerStyle">
+
+                <ImageView
+                    style="@style/SearchIconStyle"
+                    android:src="@drawable/ic_calendar_today" />
+
+                <EditText
+                    style="@style/SearchInputBoxStyle"
+                    android:hint="mm/dd/yyyy"
+                    android:inputType="date"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <!-- 5. Guests Module -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <include layout="@layout/user_search_guests" />
+
+            </FrameLayout>
+
+            <!-- 6. Search Button -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/user_search_bg_button"
+                android:text="Search"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"/> <!-- Required to use custom shape on Buttons -->
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
